@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remake Projet 1</title>
+    <!-- style -->
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animate style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar animate__animated animate__slideInDown">
+        <header>Yamabuki Saaya</header>
+        <div class="navbar-wrapper">
+            <div class="heading">
+                <h1>Inoue <span>Site</span></h1>
+            </div>
+            <div class="navbar-list">
+                <ul>
+                    <li>
+                        <i class="ri-home-3-line"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="ri-list-unordered"></i>
+                        <a href="#">List</a>
+                    </li>
+                    <li>
+                        <i class="ri-gallery-line"></i>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <i class="ri-contacts-line"></i>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-burger">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero start -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-display animate__animated animate__fadeIn animate__delay-1s">
+                <div class="box-display display-jam">
+                    <span id="jam"></span>
+                </div>
+                <div class="box-display display-greeting">
+                    <span id="greeting"></span>
+                </div>
+                <div class="box-display display-focus">
+                    <span>What is your main focus fo today?</span>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- content start -->
+    <section class="content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="content-desc" data-aos="fade-right">
+                    <h2>Gallery</h2>
+                    <p>Yamabuki Saaya is a second-year student at Hanasakigawa Girls' High School and the drummer of
+                        Poppin'Party. She became good friends with her classmate Kasumi during their high school
+                        entrance
+                        ceremony, and since then they eat lunch together every day.
+                    </p>
+                </div>
+                <div class="content-gallery">
+                    <div class="img-wrapper" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="img/saaya1.jpg" alt="saaya">
+                    </div>
+                    <div class="img-wrapper" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="img/saaya2.jpg" alt="saaya">
+                    </div>
+                    <div class="img-wrapper" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="img/saaya3.jpg" alt="saaya">
+                    </div>
+                    <div class="img-wrapper" data-aos="zoom-in" data-aos-delay="700">
+                        <img src="img/saaya4.jpg" alt="saaya">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- content end -->
+
+    <!-- script -->
+    <script src="./dist/js/script.js"></script>
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

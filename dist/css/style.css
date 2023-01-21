@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #7e634e;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+/* navbar start */
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px #00000050;
+    z-index: 9999;
+}
+
+.navbar header {
+    font-size: .75rem;
+    color: #735945;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar .navbar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #7e634e;
+}
+
+.navbar .navbar-wrapper .heading h1 {
+    font-size: 1.75rem;
+    color: #907761;
+}
+
+.navbar .navbar-wrapper .heading h1 span {
+    color: #fff9e1;
+    font-style: italic;
+}
+
+.navbar .navbar-wrapper .navbar-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .navbar-wrapper .navbar-list ul li {
+    list-style-type: none;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.navbar .navbar-wrapper .navbar-list ul li i {
+    color: #fff9e1;
+}
+
+.navbar .navbar-wrapper .navbar-list a {
+    color: #fff9e1;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar .navbar-wrapper .navbar-list a:hover {
+    color: #fff;
+}
+
+.navbar .navbar-wrapper .navbar-list a::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 300ms;
+}
+
+.navbar .navbar-wrapper .navbar-list a:hover::before {
+    transform: scaleX(1);
+}
+
+.navbar .navbar-wrapper .navbar-burger {
+    display: none;
+    color: #fff9e1;
+}
+
+/* navbar end */
+
+/* hero start */
+section.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../img/saaya6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 70px;
+}
+
+.hero .hero-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .hero-display .display-jam span {
+    font-size: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero .hero-display .display-greeting {
+    margin-bottom: 3rem;
+}
+
+.hero .hero-display .display-greeting span {
+    font-size: 5rem;
+}
+
+.hero .hero-display .display-focus span {
+    font-size: 2rem;
+    display: block;
+}
+
+.hero .hero-display .display-focus input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.hero .hero-display .display-focus input:focus {
+    outline: none;
+}
+
+/* hero end */
+
+/* content start */
+.content {
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.content .content-wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 2rem;
+    align-items: center;
+    background-color: #7e634e;
+}
+
+.content .content-wrapper .content-gallery img {
+    width: 100%;
+    border-radius: .5rem;
+    transition: 300ms;
+}
+
+.content .content-wrapper .content-gallery .img-wrapper {
+    width: 250px;
+    height: 250px;
+    transition: 300ms;
+    overflow: hidden;
+}
+
+.content .content-wrapper .content-desc {
+    color: #fff9e1;
+    padding: 2rem;
+}
+
+.container .content-wrapper .content-desc h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;
+}
+
+.content .content-wrapper .content-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content .content-wrapper .content-gallery .img-wrapper:hover {
+    transform: scale(.95);
+    border-radius: .5rem;
+}
+
+.content .content-wrapper .content-gallery .img-wrapper:hover img {
+    transform: scale(1.2);
+}
+
+/* content end */
+
+/* responsive */
+@media screen and (max-width: 968px) {
+    .navbar .navbar-wrapper .navbar-list ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        position: absolute;
+        top: 90px;
+        right: -1000px;
+        background-color: #73594550;
+        backdrop-filter: blur(5px);
+        width: 200px;
+        height: 100vh;
+        transition: 300ms;
+        z-index: 9999;
+    }
+
+    .navbar .navbar-wrapper .navbar-list ul.active {
+        right: 0;
+    }
+
+    .navbar .navbar-wrapper .navbar-list ul li {
+        /* padding: 0; */
+        margin: 0;
+        padding: .5rem;
+    }
+
+    .navbar .navbar-wrapper .navbar-burger {
+        display: inline-block;
+    }
+
+    .hero .hero-display {
+        height: 100vh;
+        display: grid;
+    }
+
+    .hero .hero-display .display-jam {
+        text-align: center;
+        align-self: end;
+    }
+
+    .hero .hero-display .display-greeting {
+        align-self: start;
+    }
+
+    .hero .hero-display .display-jam span {
+        font-size: 7rem;
+    }
+
+    .hero .hero-display .display-greeting span {
+        font-size: 3rem;
+    }
+
+    .hero .hero-display .display-focus span {
+        font-size: 1rem;
+    }
+
+    .content .content-wrapper {
+        grid-template-columns: 100%;
+    }
+
+    .content .content-wrapper .content-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero .hero-display .display-jam span {
+        font-size: 5rem;
+    }
+
+    .hero .hero-display .display-greeting span {
+        font-size: 2rem;
+    }
+
+    .hero .hero-display .display-focus span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navbar .navbar-wrapper .navbar-list ul {
+        width: 150px;
+    }
+}
